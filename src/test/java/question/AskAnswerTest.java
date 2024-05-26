@@ -1,4 +1,4 @@
-package questions;
+package question;
 
 import helper.BaseScenario;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -8,7 +8,7 @@ import page.ImpotantQueston;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class FirstTest extends BaseScenario {
+public class AskAnswerTest extends BaseScenario {
 
     private final ImpotantQueston impotantQueston = new ImpotantQueston();
 
