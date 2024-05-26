@@ -30,15 +30,20 @@ public class BaseScenario {
 
     @BeforeEach
     public void initialize() {
+        WebDriverManager.firefoxdriver().setup();
+        Configuration.browser = "firefox";
 
-        if ("firefox".equals(System.getProperty("browser"))) {
-            WebDriverManager.firefoxdriver().setup();
-            Configuration.browser = "firefox";
+//        WebDriverManager.chromedriver().setup();
+//            Configuration.browser = "chrome";
 
-        } else {
-            WebDriverManager.chromedriver().setup();
-            Configuration.browser = "chrome";
-        }
+//        if ("firefox".equals(System.getProperty("browser"))) {
+//            WebDriverManager.firefoxdriver().setup();
+//            Configuration.browser = "firefox";
+//
+//        } else {
+//            WebDriverManager.chromedriver().setup();
+//            Configuration.browser = "chrome";
+//        }
 
         Configuration.headless = Optional.ofNullable(System.getProperty("headless"))
                 .map(Boolean::parseBoolean)
