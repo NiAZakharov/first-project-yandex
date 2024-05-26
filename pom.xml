@@ -28,17 +28,9 @@
         <properties-loader.version>1.5</properties-loader.version>
         <maven-surefire-plugin.version>3.0.0-M4</maven-surefire-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-        <poi.version>3.9</poi.version>
-        <assertj-core.version>3.22.0</assertj-core.version>
-        <rest-assured.version>4.4.0</rest-assured.version>
-        <ra-json-path.version>4.4.0</ra-json-path.version>
-        <json-path.version>2.8.0</json-path.version>
-        <lombok.version>1.18.22</lombok.version>
         <slf4j.version>2.0.0-alpha1</slf4j.version>
         <aspectjweaver.version>1.9.7</aspectjweaver.version>
-        <spring-web.version>5.3.14</spring-web.version>
         <webdrivermanager>5.5.2</webdrivermanager>
-        <postgresql>42.5.0</postgresql>
     </properties>
     <dependencies>
         <dependency>
@@ -46,13 +38,6 @@
             <artifactId>webdrivermanager</artifactId>
             <version>${webdrivermanager}</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>${postgresql}</version>
-        </dependency>
-
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
@@ -117,46 +102,6 @@
             <version>${maven-surefire-plugin.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>${poi.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>${poi.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>${assertj-core.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>${rest-assured.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.jayway.jsonpath</groupId>
-            <artifactId>json-path</artifactId>
-            <version>${json-path.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>json-path</artifactId>
-            <version>${ra-json-path.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>json-schema-validator</artifactId>
-            <version>${ra-json-path.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
@@ -165,11 +110,6 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>${spring-web.version}</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>

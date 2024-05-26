@@ -29,7 +29,6 @@ public class OrderScooterTest extends BaseScenario {
         orderScooter.openOrderForm(buttonId);
 
         String[] data = {name, surname, address, station, tel};
-        System.out.println(data);
         //Первая проверка, что окошко появилось находится внутри метода по средствам самого Selenide
         String msg = orderScooter.fillOrderParams(data);
 
