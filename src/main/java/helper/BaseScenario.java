@@ -30,8 +30,6 @@ public class BaseScenario {
 
     @BeforeEach
     public void initialize() {
-        WebDriverManager.firefoxdriver().setup();
-        Configuration.browser = "firefox";
 
         if ("firefox".equals(System.getProperty("browser"))) {
             WebDriverManager.firefoxdriver().setup();
