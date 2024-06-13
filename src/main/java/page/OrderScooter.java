@@ -130,8 +130,6 @@ public class OrderScooter {
         //возвращает текст с финального попапа с номером заказа
         return $(SUCCESSLABEL)
                 .shouldBe(Condition.visible, Duration.ofSeconds(30))
-                //эта строчка тут из-за бага на
-                .shouldBe(Condition.not(Condition.text("Хотите оформить заказ?")))
                 .getText();
     }
 

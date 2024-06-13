@@ -1,8 +1,10 @@
 package test_params;
 
+import com.github.javafaker.Faker;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.params.provider.Arguments;
 
+import java.util.Locale;
 import java.util.Random;
 import java.util.stream.Stream;
 
@@ -35,21 +37,21 @@ public final class InputBodyParam {
     public static Stream<Arguments> orderScooter() {
         //первый параметр отвечает за кнопку заказа. Затем Имя, Фамилия, Адрес, Станция, Номер телефона
 
-        //Тут очень хочется использовать RandomStringUtils, но на полях ввода ограничение на кириллицу.
-        // Самодельный генератор сюда затаскивать не хочется, а другие способы мне не известны
+        Faker faker = new Faker(new Locale("ru_Ru","RU"));
+
         return Stream.of(
                 arguments(
                         0,
-                        "Василий",
-                        "Пупкин",
-                        "Адрес 1 ул Улица 1",
+                        faker.name().firstName(),
+                        faker.name().lastName(),
+                        faker.address().streetAddress(),
                         station[new Random().nextInt(station.length)],
                         RandomStringUtils.randomNumeric(11)),
                 arguments(
                         1,
-                        "Гена",
-                        "Букин",
-                        "Адрес 2 ул Улица 2",
+                        faker.name().firstName(),
+                        faker.name().lastName(),
+                        faker.address().streetAddress(),
                         station[new Random().nextInt(station.length)],
                         RandomStringUtils.randomNumeric(11))
                 );

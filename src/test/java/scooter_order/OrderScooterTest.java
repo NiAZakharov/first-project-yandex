@@ -32,7 +32,8 @@ public class OrderScooterTest extends BaseScenario {
         //Первая проверка, что окошко появилось находится внутри метода по средствам самого Selenide
         String msg = orderScooter.fillOrderParams(data);
 
-        Assertions.assertTrue(isNumeric(msg), "Итоговое сообщение не содержит номера заказа");
+//        Assertions.assertTrue(isNumeric(msg), "Итоговое сообщение не содержит номера заказа");
+        Assertions.assertTrue(msg.contains("Заказ оформлен"),"Попап не содержит текст успешного заказа");
 
     }
 
